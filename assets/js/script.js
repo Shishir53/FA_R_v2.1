@@ -2,7 +2,7 @@ $(document).ready(function(){
     includeHTML();
   });
 
-function SwitchT(a){
+function Switch(a){
 
     document.getElementById("inculdeDiv").innerHTML = "";    
     var anchor = document.getElementById("inculdeDiv");  // Get the <a> element with id="myAnchor"
@@ -10,16 +10,20 @@ function SwitchT(a){
     var att = document.createAttribute("w3-include-html");        // Create a "href" attribute
     switch (a){
 
-      case b:
+      case 'b':
       att.value = "blogs.html"; 
       break;
 
-      case p:
+      case 'p':
       att.value = "poems.html"; 
       break;
 
-      case m:
+      case 'm':
       att.value = "messages.html"; 
+      break;
+
+      default:
+        att.value = "error.html";
       break;
     }
                // Set the value of the href attribute
