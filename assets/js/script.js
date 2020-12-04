@@ -2,13 +2,27 @@ $(document).ready(function(){
     includeHTML();
   });
 
-function SwitchToBlogs(){
+function SwitchT(a){
 
     document.getElementById("inculdeDiv").innerHTML = "";    
     var anchor = document.getElementById("inculdeDiv");  // Get the <a> element with id="myAnchor"
     anchor.removeAttribute("w3-include-html");
     var att = document.createAttribute("w3-include-html");        // Create a "href" attribute
-    att.value = "blogs2.html";            // Set the value of the href attribute
+    switch (a){
+
+      case b:
+      att.value = "blogs.html"; 
+      break;
+
+      case p:
+      att.value = "poems.html"; 
+      break;
+
+      case m:
+      att.value = "messages.html"; 
+      break;
+    }
+               // Set the value of the href attribute
     anchor.setAttributeNode(att); 
     includeHTML();
 
