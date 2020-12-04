@@ -3,7 +3,10 @@ $(document).ready(function(){
   });
 
 function Switch(a){
-
+    var myobj = document.getElementById("banner");
+    myobj.remove();
+    var yourobj = document.getElementById("thirdIndexSection");
+    yourobj.remove();
     document.getElementById("inculdeDiv").innerHTML = "";    
     var anchor = document.getElementById("inculdeDiv");  // Get the <a> element with id="myAnchor"
     anchor.removeAttribute("w3-include-html");
